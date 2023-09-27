@@ -1,0 +1,20 @@
+<canvas id="canvas" width="600" height="400"></canvas>
+
+<script>
+
+function  dibujarCuadro(x,y,color,border){
+    var lienzo = document.querySelector("canvas");
+    var pincel = lienzo.getContext("2d");
+    pincel.fillStyle = color;
+    pincel.fillRect(x,y,50,50);
+    pincel.strokeStyle = border;
+    pincel.strokeRect(x,y,50,50);
+
+  }
+
+for (var x=0; x < 600; x = x + 50){
+  dibujarCuadro(x,0,"red","blue")
+  dibujarCuadro(x,50,"blue","orange")
+}
+
+</script>
